@@ -1,0 +1,84 @@
+[
+ {
+    "nome_popular": "Mandacaru",
+    "nome_cientifico": "Cereus jamacaru",
+    "genero": "Cereus",
+    "familia": "Cactaceae",
+    "ordem": "Caryophyllales",
+    "reino": "Plantae",
+    "bioma": "Caatinga",
+    "habito": "Arbusto ou árvore pequena",
+    "estrategia_seca": "Armazenamento de água nos caules",
+    "presenca_de_espinhos": true,
+    "epoca_floracao": "Janeiro, março, abril, julho, setembro, outubro e dezembro (observação de 2010 a 2012)",
+    "epoca_frutificacao": "Fevereiro, abril, setembro, outubro e dezembro (observação de 2010 a 2012)",
+    "uso_principal": "Alimentação humana, forragem animal e uso ornamental",
+    "endemismo_caatinga": false,
+    "status_conservacao": null,
+    "coordenadas_gps": null,
+    "fonte_referencia": "Embrapa - Avaliação dos aspectos fenológicos da espécie Cereus jamacaru (2014)"
+ },
+ {
+    "nome_popular": "Xique-xique",
+    "nome_cientifico": "Xiquexique gounellei",
+    "genero": "Xiquexique",
+    "familia": "Cactaceae",
+    "ordem": "Caryophyllales",
+    "reino": "Plantae",
+    "bioma": "Caatinga e Cerrado",
+    "habito": "Cacto de crescimento arbustivo",
+    "estrategia_seca": "Armazenamento de água nos caules",
+    "presenca_de_espinhos": true,
+    "epoca_floracao": null,
+    "epoca_frutificacao": null,
+    "uso_principal": "Alimentação e forragem animal",
+    "endemismo_caatinga": false,
+    "status_conservacao": null,
+    "coordenadas_gps": null,
+    "fonte_referencia": "Flora e Funga do Brasil - Jardim Botânico do Rio de Janeiro; Flora da APA Serra Branca/Raso da Catarina"
+ },
+ {
+    "nome_popular": "Coroa-de-frade",
+    "nome_cientifico": "Melocactus zehntneri",
+    "genero": "Melocactus",
+    "familia": "Cactaceae",
+    "ordem": "Caryophyllales",
+    "reino": "Plantae",
+    "bioma": "Caatinga",
+    "habito": "Cacto suculento de formato globoso",
+    "estrategia_seca": "Armazenamento de água no caule",
+    "presenca_de_espinhos": true,
+    "epoca_floracao": null,
+    "epoca_frutificacao": null,
+    "uso_principal": "Uso ornamental",
+    "endemismo_caatinga": null,
+    "status_conservacao": null,
+    "coordenadas_gps": null,
+    "fonte_referencia": "Flora e Funga do Brasil; identificação científica pendente de confirmação"
+ },
+ {
+    "nome_popular": "Palma-forrageira",
+    "nome_cientifico": "Opuntia ficus-indica",
+    "genero": "Opuntia",
+    "familia": "Cactaceae",
+    "ordem": "Caryophyllales",
+    "reino": "Plantae",
+    "bioma": "Caatinga (cultivada no Semiárido)",
+    "habito": "Planta suculenta de crescimento arbustivo",
+    "estrategia_seca": "Armazenamento de água nos cladódios",
+    "presenca_de_espinhos": null,
+    "epoca_floracao": null,
+    "epoca_frutificacao": null,
+    "uso_principal": "Forragem para alimentação animal",
+    "endemismo_caatinga": false,
+    "status_conservacao": null,
+    "coordenadas_gps": null,
+    "fonte_referencia": "Embrapa - Cultivares de Palma Forrageira; Instituto Nacional do Semiárido"
+}
+
+] 
+
+
+
+
+

@@ -1,117 +1,7 @@
-biodiversidade_de_plantas = [
-    {
-        # Mandacaru
+import json
 
-        # Identificação Básica e Taxonomia
-        "nome_popular": "Mandacaru",
-        "nome_cientifico": "Cereus jamacaru",
-        "genero": "Cereus",
-        "familia": "Cactaceae",
-        "ordem": "Caryophyllales",
-        "reino": "Plantae",
-        "bioma": "Caatinga",
-
-        # Morfologia e Ecologia
-        "habito": "Arbusto ou árvore pequena",
-        "estrategia_seca": "Armazenamento de água nos caules",
-        "presenca_de_espinhos": True,
-        "epoca_floracao": "Janeiro, março, abril, julho, setembro, outubro e dezembro (observação de 2010 a 2012)",
-        "epoca_frutificacao": "Fevereiro, abril, setembro, outubro e dezembro (observação de 2010 a 2012)",
-
-        # Etnobotânica e Usos
-        "uso_principal": "Alimentação humana, forragem animal e uso ornamental",
-
-        # Status, Distribuição e Registro
-        "endemismo_caatinga": False,
-        "status_conservacao": None,
-        "coordenadas_gps": None,
-        "fonte_referencia": "Embrapa - Avaliação dos aspectos fenológicos da espécie Cereus jamacaru (2014)",
-    },
-    {
-        # Xique-xique
-
-        # Identificação
-        "nome_popular": "Xique-xique",
-        "nome_cientifico": "Xiquexique gounellei",
-        "genero": "Xiquexique",
-        "familia": "Cactaceae",
-        "ordem": "Caryophyllales",
-        "reino": "Plantae",
-        "bioma": "Caatinga e Cerrado",
-
-        # Morfologia e Ecologia
-        "habito": "Cacto de crescimento arbustivo",
-        "estrategia_seca": "Armazenamento de água nos caules",
-        "presenca_de_espinhos": True,
-        "epoca_floracao": None,
-        "epoca_frutificacao": None,
-
-        # Etnobotânica e Usos
-        "uso_principal": "Alimentação e forragem animal",
-
-        # Status, Distribuição e Registro
-        "endemismo_caatinga": False,
-        "status_conservacao": None,
-        "coordenadas_gps": None,
-        "fonte_referencia": "Flora e Funga do Brasil - Jardim Botânico do Rio de Janeiro; Flora da APA Serra Branca/Raso da Catarina",
-    },
-    {
-        # Coroa-de-frade
-
-        # Identificação
-        "nome_popular": "Coroa-de-frade",
-        "nome_cientifico": "Melocactus zehntneri",
-        "genero": "Melocactus",
-        "familia": "Cactaceae",
-        "ordem": "Caryophyllales",
-        "reino": "Plantae",
-        "bioma": "Caatinga",
-
-        # Morfologia e Ecologia
-        "habito": "Cacto suculento de formato globoso",
-        "estrategia_seca": "Armazenamento de água no caule",
-        "presenca_de_espinhos": True,
-        "epoca_floracao": None,
-        "epoca_frutificacao": None,
-
-        # Etnobotânica e Usos
-        "uso_principal": "Uso ornamental",
-
-        # Status, Distribuição e Registro
-        "endemismo_caatinga": None,
-        "status_conservacao": None,
-        "coordenadas_gps": None,
-        "fonte_referencia": "Flora e Funga do Brasil; identificação científica pendente de confirmação",
-    },
-    {
-        # Palma-forrageira
-
-        # Identificação
-        "nome_popular": "Palma-forrageira",
-        "nome_cientifico": "Opuntia ficus-indica",
-        "genero": "Opuntia",
-        "familia": "Cactaceae",
-        "ordem": "Caryophyllales",
-        "reino": "Plantae",
-        "bioma": "Caatinga (cultivada no Semiárido)",
-
-        # Morfologia e Ecologia
-        "habito": "Planta suculenta de crescimento arbustivo",
-        "estrategia_seca": "Armazenamento de água nos cladódios",
-        "presenca_de_espinhos": None,
-        "epoca_floracao": None,
-        "epoca_frutificacao": None,
-
-        # Etnobotânica e Usos
-        "uso_principal": "Forragem para alimentação animal",
-
-        # Status, Distribuição e Registro
-        "endemismo_caatinga": False,
-        "status_conservacao": None,
-        "coordenadas_gps": None,
-        "fonte_referencia": "Embrapa - Cultivares de Palma Forrageira; Instituto Nacional do Semiárido",
-    }
-]
+with open("plantas.json", "r", encoding = "utf-8") as arquivo:
+    biodiversidade_de_plantas = json.load(arquivo)
 
 # Recebe cada dicionário da lista, um de cada vez
 def buscar_especie_planta(nome):
@@ -136,10 +26,8 @@ def buscar_especie_por_nome_cientifico(nome_cientifico):
 
     return None
 
-
 # Função responsável por exibir as informações de uma espécie
 # Recebe o dicionário da planta encontrado pela função de busca
-
 def exibir_informacoes_especie(especie):
 
     print("\n" + "="*20)
@@ -235,6 +123,10 @@ def exibir_informacoes_especie(especie):
     else:
         print("Endemismo na Caatinga: Não informado")
 
+def exibir_todas_as_plantas():
+    for especie in biodiversidade_de_plantas:
+        exibir_informacoes_especie(especie)
+
 
 # Menu interativo
 while True:
@@ -242,17 +134,18 @@ while True:
     print("=== Menu PRINCIPAL ====")
     print("1 - Consultar espécie")
     print("2 - Consultar espécie pelo nome científico")
+    print("3 - Verificar toda a lista de plantas catalogadas")
     print("0 - sair")
 
     # aceita apenas 1, 2 ou 0 como escolha
     while True:
 
-        opcao = input("Escolha uma opção (1, 2 ou 0):\n ")
+        opcao = input("Escolha uma opção (0, 1, 2 ou 3):\n ")
 
-        if opcao == "0" or opcao == "1" or opcao == "2":
+        if opcao in ("0", "1", "2", "3"):
             break
         else:
-            print("Entrada inválida! Digite 1, 2 ou 0.")
+            print("Entrada inválida! Digite 0, 1, 2 ou 3.")
 
 
     # opção para consultar a espécie
@@ -311,11 +204,13 @@ while True:
         else:
             print("Espécie não encontrada, tente novamente")
 
+    elif opcao == "3":
+        exibir_todas_as_plantas()
+
     # opção para fechar o menu
     elif opcao == "0":
 
         print("Encerrando o programa...")
         break
 
-    else:
-        print("Opção inválida, tente novamente")
+
